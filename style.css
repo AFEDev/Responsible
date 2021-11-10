@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    .heading {
+        text-align: center;
+        margin: 3vh;
+    }
+
+.container {
+    display: grid;
+}
+
+.chicken {
+    display: grid;
+    background-color: rgb(191, 238, 104);
+    margin: 2vh;
+    border-style: solid;
+}
+
+.heading_ch {
+    justify-self: end;
+    text-align: center;
+    width: 20vh;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-color: rgb(37, 202, 51);
+}
+
+.beef {
+    display: grid;
+    justify-content: flex-end;
+    background-color: mediumslateblue;
+    margin: 2vh;
+    border-style: solid;
+}
+
+.heading_av {
+    justify-self: end;
+    text-align: center;
+    width: 20vh;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-color: rgb(37, 202, 51);
+}
+
+.sushi {
+    display: grid;
+    justify-content: flex-end;
+    background-color: rgb(228, 127, 223);
+    margin: 2vh;
+    border-style: solid;
+}
+
+.heading_su {
+    justify-self: end;
+    text-align: center;
+    width: 20vh;
+    height: 4vh;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-color: rgb(37, 202, 51);
+}
+
+@media (min-width: 425px) {
+
+    .container {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:  repeat(3, 1fr);
+        grid-template-areas:    "chicken beef"
+                                "sushi sushi";
+    }  
+
+    .chicken {
+    grid-area: chicken;
+    }
+
+    .beef {
+        grid-area: beef;
+    }
+
+    .sushi {
+        grid-area: sushi;
+        display: grid;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .container {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:  repeat(1, 1fr);
+        grid-template-areas:    "chicken beef sushi"
+    }
+
+}
